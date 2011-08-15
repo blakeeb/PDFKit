@@ -32,7 +32,6 @@ class PDFKit
   def command(path = nil)
     args = [executable]
     args += @options.to_a.flatten.compact
-    args << '--quiet'
 
     if @source.html?
       args << '-' # Get HTML from stdin

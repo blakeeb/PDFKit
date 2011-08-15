@@ -6,18 +6,11 @@ class PDFKit
     def initialize
       @meta_tag_prefix = 'pdfkit-'
       @default_options = {
-        :disable_smart_shrinking => false,
-        :page_size => 'Letter',
-        :margin_top => '0.75in',
-        :margin_right => '0.75in',
-        :margin_bottom => '0.75in',
-        :margin_left => '0.75in',
-        :encoding => "UTF-8"
       }
     end
 
     def wkhtmltopdf
-      @wkhtmltopdf ||= (defined?(Bundler::GemfileError) ? `bundle exec which wkhtmltopdf` : `which wkhtmltopdf`).chomp
+      @wkhtmltopdf ||= (defined?(Bundler::GemfileError) ? `bundle exec which wkhtmltoimage` : `which wkhtmltoimage`).chomp
     end
   end
 
