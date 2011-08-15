@@ -6,6 +6,7 @@ class PDFKit
     def initialize
       @meta_tag_prefix = 'pdfkit-'
       @default_options = {
+        :encoding => "UTF-8"
       }
     end
 
